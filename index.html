@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d0fada6b505d898c9259744f814d7870"></script>
+    <script src="js/map.js"></script>
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+</head>
+<body>
+    <!-- ===== header ===== -->
+    <header>
+        <div class="center clearFix">
+            <h1 class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="porsche logo"></a>
+            </h1>
+            <nav id="nav">
+                <ul class="navLeft">
+                    <li>
+                        <a href="#">Experience</a>
+                        <ul class="sub">
+                            <li><a href="#">Motorsport</a></li>
+                            <li><a href="#">Apps &amp; Entertainment</a></li>
+                            <li><a href="#">Virtual Reality</a></li>
+                            <li><a href="#">The Porsche Magazine</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="#">Porsche Clubs</a></li>
+                            <li><a href="#">Golf</a></li>
+                            <li><a href="#">Museum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                        <ul class="sub">
+                            <li><a href="#">Digital Services</a></li>
+                            <li><a href="#">Genuine Accessories</a></li>
+                            <li><a href="#">Exclusive Manufaktur</a></li>
+                            <li><a href="#">Online Bill Payment</a></li>
+                            <li><a href="#">Porsche Protection Plan</a></li>
+                            <li><a href="#">Porsche Auto Insurance</a></li>
+                            <li><a href="#">Service &amp; Maintenance</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navRight">
+                    <li>
+                        <a href="#">Events &amp; Racing</a>
+                        <ul class="sub">
+                            <li><a href="#">Motorsport</a></li>
+                            <li><a href="#">Porsche Experience</a></li>
+                            <li><a href="#">Porsche Clubs</a></li>
+                            <li><a href="#">Porsche Golf</a></li>
+                            <li><a href="#">Porsche Partner Forum</a></li>
+                            <li><a href="#">European Delivery</a></li>
+                            <li><a href="#">Sportscar Together Day</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Company</a>
+                        <ul class="sub">
+                            <li><a href="#">Porsche at a Glance</a></li>
+                            <li><a href="#">Porsche Cars Korea</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Partner Forum</a></li>
+                            <li><a href="#">Affiliates</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- pc에서 사라지고, 반응형 ipad 이하에서만 보이도록 .hamBtn -->
+            <p class="hamBtn"><a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a></p>
+            <div class="mNav">
+                <div>
+                    <div class="closeBtn"><a href="#">
+                            <span></span>
+                            <span></span>
+                        </a></div>
+                    <ul class="navLeft">
+                        <li>
+                            <a href="#">Experience</a>
+                            <ul class="sub">
+                                <li><a href="#">Motorsport</a></li>
+                                <li><a href="#">Travel Experience</a></li>
+                                <li><a href="#">Apps &amp; Entertainment</a></li>
+                                <li><a href="#">Virtual Reality</a></li>
+                                <li><a href="#">The Porsche Magazine</a></li>
+                                <li><a href="#">Newsletter</a></li>
+                                <li><a href="#">Porsche Clubs</a></li>
+                                <li><a href="#">Golf</a></li>
+                                <li><a href="#">Museum</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                            <ul class="sub">
+                                <li><a href="#">Digital Services</a></li>
+                                <li><a href="#">Genuine Accessories</a></li>
+                                <li><a href="#">Exclusive Manufaktur</a></li>
+                                <li><a href="#">Online Bill Payment</a></li>
+                                <li><a href="#">Delivery Programs</a></li>
+                                <li><a href="#">Porsche Protection Plan</a></li>
+                                <li><a href="#">Porsche Auto Insurance</a></li>
+                                <li><a href="#">Service &amp; Maintenance</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navRight">
+                        <li>
+                            <a href="#">Events &amp; Racing</a>
+                            <ul class="sub">
+                                <li><a href="#">Motorsport</a></li>
+                                <li><a href="#">Porsche Experience</a></li>
+                                <li><a href="#">Porsche Clubs</a></li>
+                                <li><a href="#">Porsche Golf</a></li>
+                                <li><a href="#">Porsche Partner Forum</a></li>
+                                <li><a href="#">European Delivery</a></li>
+                                <li><a href="#">Sportscar Together Day</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Company</a>
+                            <ul class="sub">
+                                <li><a href="#">Porsche at a Glance</a></li>
+                                <li><a href="#">Porsche Cars Korea</a></li>
+                                <li><a href="#">Sustainability</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Partner Forum</a></li>
+                                <li><a href="#">Affiliates</a></li>
+                                <li><a href="#">Press</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ===== #mainBanner ===== -->
+    <div id="mainBanner">
+        <ul class="banner">
+            <li class="b1 active">
+                <video src="video/porsche-video1.mp4" poster="images/porsche-video-image1.jpeg" autoplay loop muted></video>
+            </li>
+            <li class="b2">
+                <video src="video/porsche-video2.mp4" poster="images/porsche-image.jpeg" autoplay loop muted></video>
+            </li>
+            <li class="b3">
+                <video src="video/porsche-video3.mp4" poster="images/11.jpeg" autoplay loop muted></video>
+            </li>
+        </ul>
+        <ul class="circleBtn">
+            <li class="on"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+        </ul>
+    </div>
+    <!-- ===== #container ===== -->
+    <div id="container">
+        <!-- section1 -->
+        <section class="modelsWrap scroll">
+            <h2>Models</h2>
+            <div class="displayCar">
+                <ul class="carShow">
+                    <li class="c1 show">
+                        <h2>718 Boxster S</h2>
+                        <div class="cars clearFix">
+                            <p class="active"><img src="images/718.png" alt="718"></p>
+                            <div class="textBox textLine">
+                                <h3>From $74,600</h3>
+                                <div>
+                                    <strong>262 kW/356 PS</strong>
+                                    <span>Power (kW)/Power (PS)</span>
+                                </div>
+                                <div>
+                                    <strong>4.4 s</strong>
+                                    <span>Acceleration 0 - 100 km/h</span>
+                                </div>
+                                <div>
+                                    <strong>285 km/h</strong>
+                                    <span>Top speed</span>
+                                </div>
+                                <p class="moreBtn"><a href="#"><span>DISCOVER MORE</span></a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="c2">
+                        <h2>911 GT3</h2>
+                        <div class="cars">
+                            <p><img src="images/911.png" alt="911"></p>
+                            <div class="textBox textLine">
+                                <h3>From $161,100</h3>
+                                <div>
+                                    <strong>375 kW/510 PS</strong>
+                                    <span>Power (kW)/Power (PS)</span>
+                                </div>
+                                <div>
+                                    <strong>3.4 s</strong>
+                                    <span>Acceleration 0 - 100 km/h</span>
+                                </div>
+                                <div>
+                                    <strong>318 km/h</strong>
+                                    <span>Top speed</span>
+                                </div>
+                                <p class="moreBtn"><a href="#"><span>DISCOVER MORE</span></a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="c3">
+                        <h2>Cayenne</h2>
+                        <div class="cars">
+                            <p><img src="images/c.png" alt="cayenne"></p>
+                            <div class="textBox textLine">
+                                <h3>From $69,000</h3>
+                                <div>
+                                    <strong>255 kW/347 PS</strong>
+                                    <span>Power (kW)/Power (PS)</span>
+                                </div>
+                                <div>
+                                    <strong>6.2 s</strong>
+                                    <span>Acceleration 0 - 100 km/h</span>
+                                </div>
+                                <div>
+                                    <strong>245 km/h</strong>
+                                    <span>Top speed</span>
+                                </div>
+                                <p class="moreBtn"><a href="#"><span>DISCOVER MORE</span></a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="c4">
+                        <h2>Macan</h2>
+                        <div class="cars">
+                            <p><img src="images/macan.png" alt="macan"></p>
+                            <div class="textBox textLine">
+                                <h3>From $52,100</h3>
+                                <div>
+                                    <strong>185 kW/252 PS</strong>
+                                    <span>Power (kW)/Power (PS)</span>
+                                </div>
+                                <div>
+                                    <strong>6.7 s</strong>
+                                    <span>Acceleration 0 - 100 km/h</span>
+                                </div>
+                                <div>
+                                    <strong>227 km/h</strong>
+                                    <span>Top speed</span>
+                                </div>
+                                <p class="moreBtn"><a href="#"><span>DISCOVER MORE</span></a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="c5">
+                        <h2>Panamera4</h2>
+                        <div class="cars">
+                            <p><img src="images/panamera.png" alt="panamera"></p>
+                            <div class="textBox textLine">
+                                <h3>From $88,400</h3>
+                                <div>
+                                    <strong>247 kW/336 PS</strong>
+                                    <span>Power (kW)/Power (PS)</span>
+                                </div>
+                                <div>
+                                    <strong>5.3 s</strong>
+                                    <span>Acceleration 0 - 100 km/h</span>
+                                </div>
+                                <div>
+                                    <strong>268 km/h</strong>
+                                    <span>Top speed</span>
+                                </div>
+                                <p class="moreBtn"><a href="#"><span>DISCOVER MORE</span></a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="c6">
+                        <h2>Taycan Turbo</h2>
+                        <div class="cars">
+                            <p><img src="images/taycan.png" alt="taycan"></p>
+                            <div class="textBox textLine">
+                                <h3>From $150,900</h3>
+                                <div>
+                                    <strong>500 kW/680 PS</strong>
+                                    <span>Power (kW)/Power (PS)</span>
+                                </div>
+                                <div>
+                                    <strong>3.2 s</strong>
+                                    <span>Acceleration 0 - 100 km/h</span>
+                                </div>
+                                <div>
+                                    <strong>260 km/h</strong>
+                                    <span>Top speed</span>
+                                </div>
+                                <p class="moreBtn"><a href="#"><span>DISCOVER MORE</span></a></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="carBtn center">
+                    <li class="on">
+                        <a href="#void"><img src="images/718-btn.png" alt="718"><span>718</span></a>
+                    </li>
+                    <li>
+                        <a href="#void"><img src="images/911-btn.png" alt="911"><span>911</span></a>
+                    </li>
+                    <li>
+                        <a href="#void"><img src="images/Cayenne-btn.png" alt="Cayenne"><span>Cayenne</span></a>
+                    </li>
+                    <li>
+                        <a href="#void"><img src="images/Macan-btn.png" alt="Macan"><span>Macan</span></a>
+                    </li>
+                    <li>
+                        <a href="#void"><img src="images/panamera-btn.png" alt="Panamera"><span>Panamera</span></a>
+                    </li>
+                    <li>
+                        <a href="#void"><img src="images/taycan-btn.png" alt="Taycan"><span>Taycan</span></a>
+                    </li>
+                </ul>
+                <ul class="arrowBtn">
+                    <li class="prev"><a href="#void"><img src="images/iconmonstr-angel-right-thin-48.png" alt=""></a></li>
+                    <li class="next"><a href="#void"><img src="images/iconmonstr-angel-left-thin-48.png" alt=""></a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- section2 -->
+        <section class="porscheServiceWrap scroll">
+            <div class="porscheDiscover center clearFix">
+                <div class="service">
+                    <p class="serviceImg"><img src="images/k1.jpg" alt="design"></p>
+                    <div class="textWrap">
+                        <h2>DESIGN YOUR VISION</h2>
+                        <p>
+                            Each Porsche that leaves Goodwood is unique to its own owner.
+                            Begin the <br>
+                            journey of commissioning your Porsche with our configurator now.
+                        </p>
+                        <p class="discoverBtn"><a href="#void">DISCOVER MORE</a></p>
+                    </div>
+                </div>
+                <div class="compare">
+                    <p class="compareImg"><img src="images/k6.jpg" alt="compare"></p>
+                    <div class="textWrap">
+                        <h2>COMPARE</h2>
+                        <p>
+                            Be enveloped in the arms of luxury and sophisticated charm.
+                            Delve into our <br>
+                            world of curated lifestyle accessories to add the finishing
+                            touches to your <br>
+                            Porsche motor car.
+                        </p>
+                        <p class="discoverBtn"><a href="#">DISCOVER MORE</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section3 -->
+        <section class="about scroll">
+            <div class="aboutPorsche center">
+                <video src="video/porsche-video4.mp4" autoplay muted loop playsinline></video>
+                <div class="textWrap">
+                    <h2>ABOUT PORSCHE</h2>
+                    <p>
+                        Porsche is the most successful manufacturer of exclusive sports cars
+                        and has an <br>
+                        outstanding reputation. This success is based on the desirability of
+                        the vehicles, <br>
+                        but equally importantly, due to its unique corporate culture that is
+                        shaped by <br>
+                        integrity and compliance. And it should stay that way. All board
+                        members, <br>
+                        members of the management bodies, managers and employees make their
+                        <br>
+                        own contributions every day according to the motto: <br>
+                        Sporty and fair - that's typical Porsche.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- section4 -->
+        <section class="experienceWrap clearFix scroll">
+            <div class="performanceWrap">
+                <div class="performance"><img src="images/blue-1.png" alt="PORSCHE E-PERFORMANCE MODELS"></div>
+                <div class="textWrap">
+                    <h2>PORSCHE E-PERFORMANCE MODELS</h2>
+                    <p>
+                        Discover our current models with all-electric drive or plug-in
+                        hybrid <br>
+                        technology and find the Porsche that is perfect for you.
+                    </p>
+                    <p class="discoverBtn"><a href="#void">DISCOVER MORE</a></p>
+                </div>
+            </div>
+            <div class="museumWrap">
+                <div class="museum"><img src="images/or-1.png" alt="PORSCHE MUSEUM"></div>
+                <div class="textWrap">
+                    <h2>PORSCHE MUSEUM</h2>
+                    <p>
+                        The Porsche Museum has been showcasing the history
+                        and fascination<br> of the brand in a modern and vibrant
+                        way since 2009. The past<br> and future of the Porsche
+                        idea come together at the heart<br> of the brand’s
+                        headquarters in Zuffenhausen.
+                    </p>
+                    <p class="discoverBtn"><a href="#void">DISCOVER MORE</a></p>
+                </div>
+            </div>
+        </section>
+        <!-- section5 -->
+        <section class="porscheDealer scroll">
+            <div class="mapWrap findPorsche">
+                <!-- <div id="map" style="width:100%;height:969px;"></div> -->
+                <!-- </div> -->
+                <div class="porscheStore">
+                    <div class="search option">
+                        <input name="locationSearch" type="text" placeholder="My current location" id="keyword">
+                        <input name="search" type="submit" value="search">
+                    </div>
+                    <div class="store">
+                    <div class="porscheCenter Cheongdam active">
+                        <h3>Porsche Studio Cheongdam</h3>
+                        <ul class="mapIcon clearFix">
+                            <li><a href="#"><img src="images/icon-map.jpg" alt=""><span>Directions</span></a></li>
+                            <li><a href="#"><img src="images/icon-globe.jpg" alt=""><span>Website</span></a></li>
+                            <li><a href="#"><img src="images/icon-car.jpg" alt=""><span>Inventory</span></a></li>
+                            <li><a href="#"><img src="images/icon-phone.jpg" alt=""><span>Call</span></a></li>
+                        </ul>
+                        <address>G Floor, Cheongdam Square, 420, Dosan-daero, Gangnam-gu</address>
+                        <p><span>Phone:</span></p>
+                        <p><a href="tel:+82.2.6191.0911">+82.2.6191.0911</a></p><br>
+                        <p><span>E-Mail:</span></p>
+                        <p><a href="info@porschestudio-cheongdam.com">info@porschestudio-cheongdam.com</a></p>
+                    </div>
+                    <div class="porscheCenter jeju">
+                        <h3>Porsche Studio Busan</h3>
+                        <ul class="mapIcon clearFix">
+                            <li><a href="#"><img src="images/icon-map.jpg" alt=""><span>Directions</span></a></li>
+                            <li><a href="#"><img src="images/icon-globe.jpg" alt=""><span>Website</span></a></li>
+                            <li><a href="#"><img src="images/icon-car.jpg" alt=""><span>Inventory</span></a></li>
+                            <li><a href="#"><img src="images/icon-phone.jpg" alt=""><span>Call</span></a></li>
+                        </ul>
+                        <address>277, Haeun-daero, Haeundae-gu 48061 Busan</address>
+                        <p><span>Phone:</span></p>
+                        <p><a href="tel:+82.2.6191.0911">+ 82.51.744.6911</a></p><br>
+                        <p><span>E-Mail:</span></p>
+                        <p><a href="info@porschestudio-cheongdam.com">pcbusan@porsche-busan.com</a></p>
+                    </div>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+        </section>
+        <!-- section6 -->
+        <section class="stayConnectedWrap center scroll">
+            <div class="instaText">
+                <h2>STAY CONNECTED</h2>
+                <p>Follow our latest news on instagram</p>
+            </div>
+            <div class="instaImgWrap">
+                <ul class="imgWrap clearFix">
+                    <li>
+                        <a href="#"><img src="images/insta-1.jpg" alt="insta1">
+                          <div class="textBox">
+                              <div class="textIn">
+                                  <strong>#porsche.Korea</strong>
+                                  <span>21 Jul 2021</span>
+                                </div>
+                                <ul class="react">
+                                  <li><img src="images/icon_heart.png" alt="">7,000</li>
+                                  <li><img src="images/icon_mention.png" alt="">5</li>
+                                </ul>
+                          </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/insta-2.jpg" alt="insta2">
+                          <div class="textBox">
+                              <div class="textIn">
+                                  <strong>#porsche.Korea</strong>
+                                  <span>21 Jul 2021</span>
+                                </div>
+                                <ul class="react">
+                                  <li><img src="images/icon_heart.png" alt="">7,000</li>
+                                  <li><img src="images/icon_mention.png" alt="">5</li>
+                                </ul>
+                          </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/insta-3.jpg" alt="insta3">
+                          <div class="textBox">
+                              <div class="textIn">
+                                  <strong>#porsche.Korea</strong>
+                                  <span>21 Jul 2021</span>
+                                </div>
+                                <ul class="react">
+                                  <li><img src="images/icon_heart.png" alt="">7,000</li>
+                                  <li><img src="images/icon_mention.png" alt="">5</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/insta-4.jpg" alt="insta4">
+                          <div class="textBox">
+                              <div class="textIn">
+                                  <strong>#porsche.Korea</strong>
+                                  <span>21 Jul 2021</span>
+                                </div>
+                                <ul class="react">
+                                  <li><img src="images/icon_heart.png" alt="">7,000</li>
+                                  <li><img src="images/icon_mention.png" alt="">5</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/insta-5.jpg" alt="insta5">
+                          <div class="textBox">
+                              <div class="textIn">
+                                  <strong>#porsche.Korea</strong>
+                                  <span>21 Jul 2021</span>
+                                </div>
+                                <ul class="react">
+                                  <li><img src="images/icon_heart.png" alt="">7,000</li>
+                                  <li><img src="images/icon_mention.png" alt="">5</li>
+                                </ul>
+                          </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/insta-6.jpg" alt="insta6">
+                          <div class="textBox">
+                              <div class="textIn">
+                                  <strong>#porsche.Korea</strong>
+                                  <span>21 Jul 2021</span>
+                                </div>
+                                <ul class="react">
+                                  <li><img src="images/icon_heart.png" alt="">7,000</li>
+                                  <li><img src="images/icon_mention.png" alt="">5</li>
+                                </ul>
+                          </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/insta-7.jpg" alt="insta7">
+                          <div class="textBox">
+                              <div class="textIn">
+                                  <strong>#porsche.Korea</strong>
+                                  <span>21 Jul 2021</span>
+                                </div>
+                                <ul class="react">
+                                  <li><img src="images/icon_heart.png" alt="">7,000</li>
+                                  <li><img src="images/icon_mention.png" alt="">5</li>
+                                </ul>
+                          </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/insta-8.jpg" alt="insta8">
+                          <div class="textBox">
+                              <div class="textIn">
+                                  <strong>#porsche.Korea</strong>
+                                  <span>21 Jul 2021</span>
+                                </div>
+                                <ul class="react">
+                                  <li><img src="images/icon_heart.png" alt="">7,000</li>
+                                  <li><img src="images/icon_mention.png" alt="">5</li>
+                                </ul>
+                              </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="scrollBg clearFix">
+                    <li class="active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!-- ===== footer ===== -->
+    <footer>
+        <div class="center">
+            <div class="footerTop">
+                <div class="changeCountry">
+                    <h3>Change country/region</h3>
+                    <select name="selectRegion" id="selectRegion">
+                        <option value="">Select a region</option>
+                        <option value="" class="c1">North America</option>
+                        <option value="" class="c2">Latin America</option>
+                        <option value="" class="c3">Europe</option>
+                        <option value="" class="c4">Middle East</option>
+                        <option value="" class="c5">Africa</option>
+                        <option value="" class="c6">Asia</option>
+                        <option value="" class="c7">Australia/Oceania</option>
+                    </select>
+                    <select name="selectCountry" id="selectCountry">
+                        <option value="">Select a country/region</option>
+                    </select>
+                </div>
+                <div class="social">
+                    <h3>STAY CONNECTED</h3>
+                    <ul class="sns">
+                        <li><a href="#">facebook</a></li>
+                        <li><a href="#">insta</a></li>
+                        <li><a href="#">twitter</a></li>
+                        <li><a href="#">youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerBottom clearFix">
+                <small>&copy; 2021 Porsche Korea Ltd.</small>
+                <p><a href="#"> Legal notice.</a></p>
+                <p><a href="#"> Privacy Notice.</a></p>
+                <p><a href="#"> Accessibility Statement. </a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== preloader ===== -->
+    <!-- <div id="preloader">
+      <div class="loading">
+        <img src="images/porsche-svg.svg" alt="">
+      </div>
+    </div> -->
+</body>
+</html>

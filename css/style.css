@@ -1,0 +1,1344 @@
+@font-face {
+  font-family: fontThin;
+  font-weight: 300;
+  src: url(../font/porschenext-thin-webfont.woff2) format("woff2");
+}
+@font-face {
+  font-family: fontBold;
+  font-weight: bold;
+  src: url(../font/PorscheNextWLa-Bold.woff2) format("woff2");
+}
+@font-face {
+  font-family: fontNormal;
+  font-weight: 400;
+  src: url(../font/PorscheNextWLa-Regular.woff2) format("woff2");
+}
+body {
+  background: black;
+}
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+header .logo {
+  margin-top: 35px;
+  text-align: center;
+}
+.center {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+/* ====== menu ====== */
+#nav > ul > li {
+  float: left;
+  width: 230px;
+  margin-left: 30px;
+  position: relative;
+}
+#nav > ul > li > a {
+  display: block;
+  text-align: center;
+  font-family: "fontNormal";
+  font-size: 18px;
+  color: #eee;
+  margin-top: -25px;
+  padding: 5px 5px 15px 5px;
+}
+#nav > .navRight {
+  float: right;
+}
+#nav > .navLeft {
+  float: left;
+}
+#nav .sub{
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  width: 190px;
+  padding: 25px;
+  margin-top: -1px;
+  line-height: 1.8;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 2px solid #d5001c;
+}
+#nav .sub a {
+  color: #eee;
+  font-size: 15px;
+  padding-bottom: 2px;
+  font-family: "fontNormal";
+}
+#nav ul > li:hover .sub {
+  display: block;
+}
+.sub > li:hover {
+  border-bottom: 0.75px solid #eee;
+  padding-bottom: 1px;
+}
+/* ====== hamBtn ====== */
+.hamBtn {
+  position: absolute;
+  left: 7%;
+  top: 65%; 
+}
+.hamBtn > a > span {
+  display: none;
+  width: 30px;
+  height: 2px;
+  background: white;
+}
+.hamBtn > a > span:nth-child(2) {
+  margin: 6px 0;
+  width: 25px;
+}
+.hamBtn > a > span:nth-child(3) {
+  width: 20px;
+}
+/* ====== mNav ====== */
+header .mNav {
+  display: none;
+  height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+}
+/* ====== mainBanner ====== */
+#mainBanner {
+  width: 100%;
+  height: 51vw;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.banner {
+  width: 100%;
+  height: 100%;
+}
+.banner > li {
+  width: 100%;
+  height: 100%;
+}
+.banner > li > video {
+  width: 100%;
+}
+/* ====== circle button ====== */
+.circleBtn {
+  position: absolute;
+  left: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.circleBtn > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.circleBtn > li > a {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 30px;
+  text-indent: -9999px;
+}
+.circleBtn > .on > a {
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  border: 1px solid #eee;
+}
+/* ====== arrow ====== */
+.arrow {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 90%;
+}
+.arrow-first {
+  animation: arrow-movement 2s ease-in-out infinite;
+}
+.arrow-second {
+  animation: arrow-movement 2s 1s ease-in-out infinite;
+}
+.arrow:before,
+.arrow:after {
+  background: #d5001c;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+}
+.arrow:before {
+  transform: rotate(45deg) translateX(-19%);
+  transform-origin: top left;
+}
+.arrow:after {
+  transform: rotate(-45deg) translateX(19%);
+  transform-origin: top right;
+}
+@keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    top: 85%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* ====== #container ====== */
+#container > section {
+  box-sizing: border-box;
+}
+/* ====== section1 ====== */
+.modelsWrap {
+  background: url(../images/11.jpg) center center;
+  height: 969px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.modelsWrap > h2 {
+  padding-top: 50px;
+  font-size: 50px;
+  margin-left: 100px;
+  font-family: "fontNormal";
+}
+.displayCar {
+  overflow: hidden;
+}
+.displayCar > .carShow {
+  height: 750px;
+}
+.displayCar > .carShow > li {
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+}
+.displayCar > .carShow > li.show {
+  left: 0%;
+  animation: carShowUp 2.5s;
+}
+.displayCar > .carShow > li > h2 {
+  display: block;
+  text-align: center;
+  font-family: "fontBold";
+  color: #bbcce9;
+  text-shadow: 1px 1px 0px #cadef6, 0 0 0 #000;
+  font-size: 157px;
+  margin-top: 50px;
+}
+.displayCar > .carShow > li > .cars {
+  max-width:1200px;
+  margin:0 auto;
+  padding-top:70px;
+}
+.displayCar > .carShow > li > .cars > p {  
+  float: left;
+}
+.displayCar > .carShow > li > .cars > .active > img {
+  animation: carShowUp 2.5s;
+}
+@keyframes carShowUp {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+.displayCar > .carShow > li > .cars > .textBox {
+  float: right;
+  margin-top: -50px;
+}
+.textBox > h3 {
+  font-family: "fontNormal";
+  font-weight: 600;
+  font-size: 25px;
+  padding-bottom: 30px;
+}
+.textBox > div {
+  padding-bottom: 33px;
+}
+.textBox > div strong {
+  display: block;
+  font-size: 20px;
+  font-family: "fontNormal";
+}
+.textBox > div span {
+  font-size: 12px;
+  font-family: "fontNormal";
+}
+.textBox > .moreBtn {
+  border: 1px solid black;
+  text-align: center;
+  width: 140px;
+  background: transparent;
+  padding: 13px 15px 13px 15px;
+  font-size: 16px;
+  font-family: "fontNormal";
+  position: relative;
+  background: black;
+}
+.textBox > .moreBtn a {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.textBox > .moreBtn span {
+  display: block;
+  color: white;
+  mix-blend-mode: difference;
+}
+.textBox > .moreBtn:hover span {
+  animation: moveTextUp 0.3s, moveDownUp 0.3s 0.3s;
+}
+@keyframes moveTextUp {
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes moveDownUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.textBox > .moreBtn::before {
+  content: "";
+  display: block;
+  background: #dde9fa;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s;
+  transform-origin: 100% 0;
+}
+
+.textBox > .moreBtn:hover::before {
+  transform: scaleX(0);
+  transform-origin: 0% 0;
+}
+.carBtn {
+  display: flex;
+  align-items: center;
+}
+.carBtn > li {
+  position: relative;
+  margin-left: 30px;
+  left: 12%;
+}
+.carBtn > li > a > img {
+  padding-top: 20px;
+}
+.carBtn > li span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  color: #c8cacb;
+  font-family: "fontThin";
+}
+.carBtn > .on span {
+  font-size: 35px;
+  color: black;
+  margin-left: -5px;
+  font-family: "fontThin";
+}
+.carBtn > .on img {
+  transform: scale(1.08, 1.08);
+}
+.arrowBtn{
+  display: none;
+}
+/* ======= section2 ======= */
+.porscheServiceWrap {
+  background: url(../images/3pg-background.jpg) center center no-repeat;
+  text-align: center;
+  width: 100%;
+  height: 969px;
+}
+.service {
+  float: left;
+  margin-top: 10.4583vw;
+}
+.service > .serviceImg,
+.compare > .compareImg {
+  overflow: hidden;
+}
+.compare {
+  float: right;
+  margin-top: 10.4583vw;
+}
+.textWrap > h2 {
+  color: #eee;
+  font-size: 30px;
+  padding-bottom: 40px;
+  font-family: "fontNormal";
+}
+.textWrap > p {
+  color: #eee;
+  font-size: 18px;
+  padding-bottom: 50px;
+  font-family: "fontThin";
+}
+.porscheDiscover h2 {
+  padding: 2.0833vw;
+}
+.porscheDiscover p {
+  margin-bottom: 1.125vw;
+}
+/* ======= button ====== */
+.porscheDiscover > .service .discoverBtn {
+  padding-top: 1.1vw;
+}
+.discoverBtn > a {
+  width: 200px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  position: relative;
+  padding: 12px 20px 12px 20px;
+  color: #eee;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+}
+.discoverBtn > a::after {
+  background: url(../images/icon-arrow-black.png) center center no-repeat;
+  opacity: 0;
+  overflow: hidden;
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+.discoverBtn:hover a {
+  background: rgba(255, 255, 255, 0.7);
+  color: #000;
+  border: 1px solid black;
+}
+.discoverBtn > a:hover::after {
+  transform-origin: 100% 0;
+  animation: textMove 1s;
+  opacity: 1;
+}
+@keyframes textMove {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+/* ======= section3 ====== */
+.about {
+  width: 100%;
+  height: 969px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.about > .aboutPorsche {
+  position: relative;
+}
+.about > .aboutPorsche > video {
+  display: block;
+  width: 100%;
+}
+.about > .aboutPorsche > .textWrap {
+  position: absolute;
+  color: #eee;
+  left: 10%;
+  bottom: 2.1666vw;
+}
+/* ======= section4 ====== */
+.experienceWrap {
+  width: 100%;
+  height: 969px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.performanceWrap {
+  position: relative;
+}
+.performanceWrap > .performance {
+  float: left;
+  overflow: hidden;
+}
+.textWrap > h2 {
+  font-size: 30px;
+  padding-bottom: 40px;
+  color: #eee;
+  font-family: "fontNormal";
+}
+.textWrap > p {
+  font-size: 18px;
+  padding-bottom: 50px;
+  color: #eee;
+  font-family: "fontThin";
+  line-height: 1.2;
+}
+.performanceWrap > .textWrap {
+  float: left;
+  margin-left: 1100px;
+  margin-top: -380px;
+}
+.museumWrap {
+  position: relative;
+}
+.museumWrap > .museum {
+  float: right;
+  overflow: hidden;
+}
+.museumWrap > .textWrap {
+  padding: 10px;
+  float: right;
+  margin-right: 1100px;
+  margin-top: -400px;
+}
+.experienceWrap .textWrap .discoverBtn {
+  text-align: center;
+}
+/* ======= section5 ======= */
+.mapWrap {
+  position: relative;
+}
+.porscheStore {
+  position: absolute;
+  top: 5.2083vw;
+  left: 5.2083vw;
+  width: 25.5vw;
+  z-index: 10000;
+}
+input[name="locationSearch"] {
+  border: 1px solid;
+  padding-left: 10px;
+  width: 17.4vw;
+  height: 2.3437vw;
+  background: white;
+  font-size: 0.9375vw;
+  float: left;
+}
+input[name="search"] {
+  margin-left: 1.4062vw;
+  border: 1px solid black;
+  width: 5.8083vw;
+  height: 2.3437vw;
+  background: #40494f;
+  color: #eee;
+}
+.porscheCenter {
+  margin-top: 1.0416vw;
+  background: white;
+  height: 16.625vw;
+  border-bottom: 5px solid #d5001c;
+  padding: 5px 25px;
+}
+.porscheCenter > h3 {
+  color: #d5001c;
+  padding-top: 0.5208vw;
+  padding-bottom: 0.5208vw;
+  font-size: 19px;
+}
+.porscheCenter > h3::before {
+  content: "";
+  display: block;
+  background: url(../images/pin.png) center center no-repeat;
+  width: 32px;
+  height: 32px;
+  float: left;
+  margin-right: 0.5208vw;
+}
+.porscheCenter > address {
+  font-size: 16px;
+  padding-top: 1.5625vw;
+  padding-bottom: 0.8812vw;
+}
+.porscheCenter > p {
+  font-size: 15px;
+  display: inline-block;
+  padding-bottom: 15px;
+  padding-bottom: 0.7812vw;
+}
+.porscheCenter p span {
+  font-size: 14px;
+  font-weight: 900;
+}
+.mapIcon {
+  position: relative;
+  display: flex;
+  padding-bottom: 1.0416vw;
+  padding-top: 1.302vw;
+}
+.mapIcon > li {
+  position: relative;
+  margin-right: 2.6041vw;
+}
+.mapIcon > li > a {
+  border: 1px solid black;
+  border-radius: 30px;
+  width:42px;
+  height: 42px;
+  display: block;
+}
+.mapIcon > li > a > img {
+  margin: 0 auto;
+  margin-left: 0.3604vw;
+  margin-top: 0.5125vw;
+}
+.mapIcon > li > a > span {
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  line-height: 14px;
+  margin-top: 50px;
+  position: absolute;
+}
+.mapIcon > li:hover a {
+  border: 1px solid #d5001c;
+}
+.mapIcon > li:hover span {
+  color: #d5001c;
+}
+#map {
+  width: 100%;
+  height: 969px;
+}
+/* section6 */
+.stayConnectedWrap {
+  height: auto;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.instaText {
+  padding-top: 5.2083vw;
+  text-align: center;
+  padding-bottom: 5.2083vw;
+  color: #eee;
+}
+.instaText > h2 {
+  font-size: 40px;
+  padding-bottom: 0.5208vw;
+  font-family: "fontNormal";
+}
+.instaText > p {
+  font-size: 18px;
+  font-family: "fontThin";
+}
+.instaImgWrap {
+  width: 100%;
+}
+.instaImgWrap > .imgWrap {
+  width: 200%;
+  margin-left: -12.5%;
+}
+.instaImgWrap > .imgWrap > li {
+  float: left;
+  width: 12.5%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.imgWrap > li a {
+  display: block;
+  position: relative;
+}
+.imgWrap > li> a>img {
+  width: 100%;
+}
+.imgWrap > li .textBox {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  color: white;
+  display: none;
+}
+.imgWrap > li .textBox .textIn{
+  padding-top: 5.2083vw;
+  text-align: center;
+}
+.imgWrap > li .textBox .react{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 10px ;
+  font-size: 11px;
+}
+.imgWrap > li .textBox .react li{
+  display: inline-block;
+  padding:0 10px;
+}
+.imgWrap > li .textBox strong{
+  font-size: 20px;
+}
+.scrollBg {
+  background: #ccc;
+  width: 50%;
+  margin: 30px auto;
+  border-radius: 10px;
+  height: 2px;
+  top: 220px;
+}
+.scrollBg > li {
+  float: left;
+  width: 12.5%;
+  height: 2px;
+  background: transparent;
+  text-indent: -9999px;
+}
+.scrollBg > .active {
+  background: #d5001c;
+}
+/* footer */
+footer {
+  margin:0 auto;
+  height: 200px;
+}
+.footerTop {
+  display: block;
+  overflow: hidden;
+  border-top: 0.75px solid #eee;
+  padding-top: 30px;
+}
+.changeCountry {
+  float: left;
+  color: #eee;
+  padding-bottom: 50px;
+  text-align: left;
+}
+.changeCountry > h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.changeCountry>select{
+  border: 1px solid #eee;
+  background-color: #363636;
+  color: #eee;
+  width: 250px;
+  height: 45px;
+  font-size: 16px;
+  padding-left: 10px;
+}
+select[name="selectRegion"] {
+  margin-right: 20px;
+}
+.social {
+  float: right;
+  text-align: center;
+}
+.social > h3 {
+  color: #eee;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.social > .sns > li {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin:0 10px;
+}
+.social > .sns > li > a {
+  display: block;
+  text-indent: -9999px;
+}
+.social > .sns > li:first-child {
+  background: url(../images/facebook.png) center center no-repeat;
+}
+.social > .sns > li:nth-child(2) {
+  background: url(../images/insta.png) center center no-repeat;
+}
+.social > .sns > li:nth-child(3) {
+  background: url(../images/twitter.png) center center no-repeat;
+}
+.social > .sns > li:nth-child(4) {
+  background: url(../images/youtube.png) center center no-repeat;
+}
+.footerBottom {
+  color: #eee;
+}
+.footerBottom > small {
+  float: left;
+}
+.footerBottom > p > a {
+  color: #eee;
+  float: left;
+  padding-left: 10px;
+}
+/* --------loadingScreen--------- */
+@keyframes hidesplashscreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: hidesplashscreen 0.3s ease-in-out forwards;
+  animation-delay: 2s;
+  z-index: 100000;
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* --------반응형--------- */
+@media screen and (max-width: 1420px) {
+  .center {
+    width: 100%;
+  }
+  section{
+    padding: 30px 0px;
+  }
+  #nav ul,
+  .mapIcon,
+  .search
+  {
+    display: none;
+  }
+  .hamBtn > a > span,
+  .arrowBtn {
+    display: block;
+  }
+  header .mNav {
+    display: block;
+    top:0;
+    width: 100%;
+    left: -100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  header .mNav>div>ul>li{
+    line-height: 2;
+    padding-bottom: 20px;
+  }
+  header .mNav li a {
+    padding-left: 60px;
+    color: white;
+    font-size: 15px;
+  }
+  header .mNav .closeBtn {
+    padding: 40px 70px;
+  }
+  header .mNav .closeBtn a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 10px;
+  }
+  header .mNav .closeBtn a span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0;
+  }
+  header .mNav .closeBtn a span:last-child {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  header .mNav ul li .sub {
+      display: none;
+      margin: 30px 10px;
+      border-top: 1px solid #d5001c;
+      border-bottom: 1px solid #d5001c;
+      padding:20px 0 ;
+      line-height: 1.7;
+  }
+  .mNav .sub > li  a{
+    font-size:13px;
+  }
+  /* =====section1======= */
+  .modelsWrap {
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+45,d3d3d3+70,ffffff+91,ffffff+100 */
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 45%, rgba(211,211,211,1) 70%, rgba(255,255,255,1) 91%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 45%,rgba(211,211,211,1) 70%,rgba(255,255,255,1) 91%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 45%,rgba(211,211,211,1) 70%,rgba(255,255,255,1) 91%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+    background-size: 100%;
+    height: auto;
+    display: inline-block;
+    border-radius: 5%;
+    padding-bottom: 30px;
+  }
+  .modelsWrap > h2 {
+    top: 4.6041vw;
+    font-size: 42px;
+    margin-left: 5.2083vw;
+  }
+  .displayCar > .carShow {
+    height:60vw;
+    width: 600%;
+  }
+  .displayCar > .carShow > li > h2 {
+    font-size: 110px;
+    margin-top: 20px;
+  }
+  .displayCar > .carShow > li > .cars{
+    padding-top:20px;
+  }
+  .displayCar > .carShow > li > .cars > p {
+    float: none;
+  }
+  .displayCar > .carShow > li > .cars > p > img {
+    width: 80%;
+    transform: translateX(15%);
+    left: 50%;
+  }
+  .displayCar > .carShow > li > .cars > .textBox {
+    width: 100vw;
+    text-align: center;
+  }
+  .textBox > h3 {
+    padding-top:50px;
+    color: #40494f;
+    font-size: 21px;
+  }
+  .textBox > div {
+    margin-left: 8.6041vw;
+    display: inline-block;
+    padding-bottom: 1.7187vw;
+  }
+  .textBox > div strong {
+    font-size: 19px;
+  }
+  .textBox > div span {
+    font-size: 13px;
+  }
+  .textBox > .moreBtn {
+    display: inline-block;
+    left: 5.2083vw;
+    font-size: 15px;
+    padding: 10px;
+    background: none;
+  }
+  .textBox > .moreBtn:hover span {
+    animation: none;
+  }
+  .textBox > .moreBtn::before {
+    display: none;
+  }
+  .textBox > .moreBtn:hover::before {
+    display: none;
+    background: none;
+  }
+  .displayCar > .carBtn {
+    display: none;
+  }
+  .carBtn {
+    display: none;
+  }
+  .arrowBtn>a{
+    text-indent: -99999px;
+  }
+.arrowBtn>li{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+  }
+  .arrowBtn img{
+    width: 50%;
+  }
+  .arrowBtn>.next{
+    left: 3%;
+  }
+  .arrowBtn>.prev{
+    right: 3%;
+  }
+  /* =======section2======= */
+  .porscheServiceWrap {
+    background: none;
+    text-align: left;
+    height: 100%;
+  }
+  .service,
+  .compare {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+  }
+  .compare{
+    padding: 20px 0;
+  }
+  .service > .serviceImg,
+  .compare > .compareImg {
+    border-radius: 0px;
+    overflow: hidden;
+  }
+  .porscheDiscover img {
+    width: 100%;
+  }
+  .discoverBtn > a :hover .compareImg {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+  }
+  .porscheDiscover .textWrap {
+    position: absolute;
+    bottom: 5%;
+    left:5%;
+    z-index: 10000;
+  }
+  .porscheDiscover h2 {
+    padding: 0 0 40px 0;
+  }
+  .discoverBtn {
+    display: inline-block;
+  }
+  .discoverBtn > a {
+    border: none;
+  }
+  .discoverBtn:hover a {
+    background: none;
+    color: white;
+    border: none;
+  }
+  .discoverBtn > a::after {
+    background: url(../images/arrow.png) center center no-repeat;
+  }
+  .textWrap > h2 {
+    font-size: 30px;
+    padding-bottom: 40px;
+  }
+  .textWrap > p {
+    font-size: 18px;
+    padding-bottom: 50px;
+  }
+  /* ======= section3 ======= */
+  .about {
+    height: auto;
+  }
+  .about > .aboutPorsche > .textWrap {
+    width: 90%;
+    left: 5%;
+  }
+  .about > .aboutPorsche > .textWrap > h2 {
+    font-size: 25px;
+  }
+  .about > .aboutPorsche > .textWrap > p {
+    font-size: 18px;
+  }
+  /* ======= section4 ====== */
+  .experienceWrap {
+    display: none;
+  }
+  .porscheStore {
+    width: 300px;
+  }
+  .porscheCenter {
+    height: 180px;
+    padding: 5px 15px;
+  }
+  .porscheCenter > h3 {
+    padding-top: 1vw;
+    padding-bottom: 0.2vw;
+    font-size: 20px;
+  }
+  .porscheCenter > address {
+    font-size: 15px;
+  }
+  .porscheCenter > p {
+    font-size: 14px;
+  }
+  #map {
+    height: 50vw;
+  }
+  .instaText > h2 {
+    font-size: 22px;
+  }
+  .instaText > p {
+    font-size: 18px;
+  }
+  .changeCountry>select{
+    border: 1px solid #eee;
+    background-color: #363636;
+    color: #eee;
+    width: 240px;
+    height: 40px;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 920px) {
+  .circleBtn {
+    display: none;
+  }
+  #mainBanner {
+    height: 100vh;
+  }
+  .banner {
+    background: url(../images/m8.jpg) center 0 no-repeat;
+    background-size: 100%;
+    height: 100%;
+  }
+  .banner > li {
+    display: none;
+  }
+  header .mNav {
+    width: 60%;
+  }
+  header .mNav li a {
+    padding-left: 40px;
+  }
+  header .mNav .closeBtn {
+    padding: 40px 50px;
+  }
+  .modelsWrap > h2 {
+    font-size: 35px;
+  }
+  .textBox > div strong {
+    font-size: 18px;
+  }
+  .textBox > div span {
+    font-size: 12px;
+  }
+  .textBox > .moreBtn {
+    font-size: 14px;
+    left: 5.2083vw;
+  }
+  .textWrap > h2 {
+    font-size: 3vw;
+    padding-bottom: 2.0833vw;
+  }
+  .textWrap > p {
+    font-size: 2vw;
+    padding-bottom: 2.6041vw;
+  }
+  .about > .aboutPorsche > .textWrap > h2 {
+    font-size: 20px;
+  }
+  .about > .aboutPorsche > .textWrap > p {
+    font-size: 16px;
+  }
+  .porscheCenter {
+    height: auto;
+  }
+  .porscheCenter > h3 {
+    font-size: 18px;
+
+  }
+  .porscheCenter > address {
+    padding-top: 1vw;
+    font-size: 15px;
+  }
+  .porscheCenter > p {
+    font-size: 15px;
+  }
+  .porscheCenter p span {
+    font-weight: 600;
+  }
+  .porscheCenter p span:nth-child(2),
+  .porscheCenter p:nth-child(2),
+  .porscheCenter>p:last-child{
+    display: none;
+  }
+  footer {
+    padding: 0px 20px;
+  }
+  .changeCountry{
+    float:none;
+    text-align: center;
+  }
+  .changeCountry > h3 {
+    font-size: 20px;
+  }
+  select[name="selectRegion"],
+  select[name="selectCountry"]{
+    width:40%;
+  }
+  .social {
+    margin-left: 0px;
+    float: none;
+    padding-bottom: 30px;
+  }
+  .social > h3 {
+    font-size: 16px;
+  }
+  .imgWrap > li .textBox strong{
+    font-size: 15px;
+  }
+  .textBox{display: none;}
+}
+@media screen and (max-width:767px){
+  header .mNav li a {
+    padding-left: 30px;
+  }
+  header .mNav .closeBtn {
+    padding: 40px 40px;
+  }
+  .displayCar > .carShow > li > h2{
+    font-size:80px;
+  }
+  .modelsWrap > h2 {
+    font-size: 30px;
+    padding-top: 40px;
+  }
+  .textBox > h3 {
+    padding-top:50px;
+    font-size: 19px;
+  }
+  .displayCar > .carShow > li > .cars > .textBox > div {
+    margin-left: 25px;
+  }
+  .textBox > div strong {
+    font-size: 18px;
+  }
+  .textBox > div span {
+    font-size: 13px;
+  }
+  .textBox > .moreBtn {
+    padding: 6px;
+    font-size: 13px;
+    width: 120px;
+  }
+  .about > .aboutPorsche > .textWrap > p {
+    font-size: 16px;
+  }
+  .porscheStore {
+    position: static;
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+  }
+  .porscheCenter {
+    box-sizing: border-box;
+    height: 70px;
+    width: 600px;
+    border-radius: 5px;
+  }
+  .porscheCenter > h3 {
+    font-size: 15px;
+  }
+  .porscheCenter > h3::before {
+    display: none;
+  }
+  .porscheCenter > address {
+    font-size: 13px;
+  }
+  .porscheCenter > p {
+  display: none;
+  }
+}
+@media screen and (max-width:680px){
+  .about > .aboutPorsche > .textWrap > p {
+    display: none;
+  }
+  .porscheCenter {
+    box-sizing: border-box;
+    height: 60px;
+    width: 500px;
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width:540px){
+  .textWrap>p:first-of-type{
+    display: none;
+  }
+  header .mNav li a {
+    padding-left: 20px;
+  }
+  header .mNav .closeBtn {
+    padding: 40px 30px;
+  }
+  .modelsWrap > h2{
+    padding-top: 30px;
+  }
+  .displayCar > .carShow > li > h2{
+    font-size:50px;
+  }
+  .textBox > h3 {
+    padding-top:50px;
+    font-size: 18px;
+  }
+  .textBox > div {
+    padding-bottom: 1.7187vw;
+    margin-left: 10px;
+  }
+  .textBox > div strong {
+    font-size: 16px;
+  }
+  .textBox > div span {
+    font-size: 12px;
+  }
+  .textWrap > h2 {
+    font-size: 18px;
+  }
+  .textWrap > p {
+    font-size: 14px;
+  }
+  .porscheStore {
+    top: 1.5vw;
+  }
+  .porscheCenter {
+    box-sizing: border-box;
+    height: 60px;
+    width: 400px;
+    border-radius: 5px;
+  }
+  .porscheCenter > h3 {
+    font-size: 15px;
+  }
+  .porscheCenter > address {
+    font-size: 13px;
+  }
+  .changeCountry>select{
+    height: 30px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:480px){
+  .logo>a>img{
+    width: 200px;
+  }
+  .porscheCenter {
+    height: 31px;
+    width: 300px;
+    border-radius: 5px;
+  }
+  .porscheCenter > h3 {
+    font-size: 13px;
+  }
+  .porscheCenter > address {
+    display: none;
+  }
+}
+@media screen and (max-width:360px){
+  .displayCar > .carShow > li > h2{
+    font-size:35px;
+  }
+
+}

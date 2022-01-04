@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Hamberger_1" data-name="Hamberger 1" class="cls-1" d="M4,11.055V9.525H34.37v1.53H4Z"/>
+  <path id="Hamberger_2" data-name="Hamberger 2" class="cls-1" d="M4,18.719v1.439H26.778V18.719H4Z"/>
+  <path id="Hamberger_3" data-name="Hamberger 3" class="cls-1" d="M4,30.156V27.639H19.185v2.516H4Z"/>
+</svg>
